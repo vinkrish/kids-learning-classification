@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Classification</string>
+
+    <string name="your_score">Your Score :&#160;</string>
+
+    <string name="land_animal"><![CDATA[Land\nAnimal]]></string>
+    <string name="sea_animal"><![CDATA[Sea\nAnimal]]></string>
+    <string name="flying_animal"><![CDATA[Flying\nAnimal]]></string>
+    <string name="title_activity_classification_fling">ClassificationFlingActivity</string>
+
+    <string name="violet_theme">Violet Theme</string>
+    <string name="blue_theme">Blue Theme</string>
+    <string name="yellow_theme">Yellow Theme</string>
+
+</resources>
