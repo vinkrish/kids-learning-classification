@@ -2,6 +2,7 @@ package com.vinkrish.classification;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Environment;
@@ -32,7 +33,15 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-import com.vinkrish.classification.AnimationUtils.TrajectoryAnimation;
+import com.vinkrish.Utils.AnimationUtils;
+import com.vinkrish.Utils.BottomLayerShadow;
+import com.vinkrish.Utils.CommonUtils;
+import com.vinkrish.Utils.CurvedView;
+import com.vinkrish.Utils.DashedLineView;
+import com.vinkrish.Utils.HomeView;
+import com.vinkrish.Utils.SinusoidalView;
+import com.vinkrish.Utils.ZigzagView;
+import com.vinkrish.Utils.AnimationUtils.TrajectoryAnimation;
 
 public class ClassificationVioletActivity extends AppCompatActivity {
     private RelativeLayout classificationLayout;
@@ -84,7 +93,7 @@ public class ClassificationVioletActivity extends AppCompatActivity {
         final DashedLineView dashedLineView = new DashedLineView(this);
         final SinusoidalView sinusoidalView = new SinusoidalView(this);
         final ZigzagView zigzagView = new ZigzagView(this);
-        final CurvedLine curvedLine = new CurvedLine(this);
+        final CurvedView curvedView = new CurvedView(this);
         final HomeView homeView = new HomeView(this);
         //setContentView(sinusoidalView);
 
@@ -126,7 +135,7 @@ public class ClassificationVioletActivity extends AppCompatActivity {
         Point point2 = new Point(viewLocation[0] + 80, viewLocation[1] - 40);
         Point point3 = new Point(viewLocation[0] + bottomLayout.getWidth() - 80, viewLocation[1] - 40);
         Point point4 = new Point(viewLocation[0] + bottomLayout.getWidth(), viewLocation[1]);
-        String color = "#999";
+        int color = Color.WHITE;
         BottomLayerShadow bottomLayerShadow = new BottomLayerShadow(this, point1, point2, point3, point4, color);
         classificationLayout.addView(bottomLayerShadow);
     }
@@ -337,6 +346,7 @@ public class ClassificationVioletActivity extends AppCompatActivity {
         sprite.setPadding(5, 20, 5, 15);
 
         BitmapFactory.Options options = new BitmapFactory.Options();
+        //options.inSampleSize = 8;
         Bitmap bitmap = BitmapFactory.decodeFile(imagePath, options);
         sprite.setImageBitmap(bitmap);
 

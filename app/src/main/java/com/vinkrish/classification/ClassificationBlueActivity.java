@@ -25,6 +25,12 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.google.gson.Gson;
+import com.vinkrish.Utils.AnimationUtils;
+import com.vinkrish.Utils.BottomLayerShadow;
+import com.vinkrish.Utils.HexagonImageView;
+import com.vinkrish.Utils.HexagonImageView2;
+import com.vinkrish.Utils.HomeView;
+import com.vinkrish.Utils.ZigzagView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -119,7 +125,7 @@ public class ClassificationBlueActivity extends AppCompatActivity {
         Point point2 = new Point(viewLocation[0] + 80, viewLocation[1] - 40);
         Point point3 = new Point(viewLocation[0] + bottomLayout.getWidth() - 80, viewLocation[1] - 40);
         Point point4 = new Point(viewLocation[0] + bottomLayout.getWidth(), viewLocation[1]);
-        String color = "#999";
+        int color = Color.WHITE;
         BottomLayerShadow bottomLayerShadow = new BottomLayerShadow(this, point1, point2, point3, point4, color);
         classificationLayout.addView(bottomLayerShadow);
     }

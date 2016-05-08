@@ -9,7 +9,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
@@ -41,7 +40,15 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-import com.vinkrish.classification.AnimationUtils.TrajectoryAnimation;
+import com.vinkrish.Utils.AnimationUtils;
+import com.vinkrish.Utils.BottomLayerShadow;
+import com.vinkrish.Utils.CommonUtils;
+import com.vinkrish.Utils.CurvedView;
+import com.vinkrish.Utils.DashedLineView;
+import com.vinkrish.Utils.HomeView;
+import com.vinkrish.Utils.SinusoidalView;
+import com.vinkrish.Utils.ZigzagView;
+import com.vinkrish.Utils.AnimationUtils.TrajectoryAnimation;
 
 @SuppressLint("NewApi")
 @SuppressWarnings("deprecation")
@@ -87,7 +94,7 @@ public class ClassificationActivity extends AppCompatActivity {
     private DashedLineView dashedLineView;
     private ZigzagView zigzagView;
     private SinusoidalView sinusoidalView;
-    private CurvedLine curvedLine;
+    private CurvedView curvedView;
     private HomeView homeView;
     private Animation spriteTrajectory;
 
@@ -150,8 +157,8 @@ public class ClassificationActivity extends AppCompatActivity {
                 break;
 
             case "yellow":
-                curvedLine = new CurvedLine(getApplicationContext(), initX);
-                classificationLayout.addView(curvedLine);
+                curvedView = new CurvedView(getApplicationContext(), initX);
+                classificationLayout.addView(curvedView);
                 dashedLineView = new DashedLineView(this, R.color.themeYellow);
                 zigzagView = new ZigzagView(this, R.color.themeYellow);
                 sinusoidalView = new SinusoidalView(this, R.color.themeYellow);

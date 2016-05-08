@@ -12,4 +12,15 @@
     <string name="blue_theme">Blue Theme</string>
     <string name="yellow_theme">Yellow Theme</string>
 
+    <string name="choose_theme">Choose Theme</string>
+    <string name="save">Save</string>
+
+    <string name="choose_theme_from">Choose a theme from these</string>
+    <string name="theme_preview">Theme Preview</string>
+    <string name="custom_theme">Create a Custom Theme</string>
+    <string name="background">Background</string>
+    <string name="movement">Movement</string>
+    <string name="frame">Frame</string>
+    <string name="container">Container</string>
+
 </resources>

@@ -14,11 +14,7 @@
             android:name=".ClassificationActivity"
             android:hardwareAccelerated="false"
             android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ClassificationVioletActivity"
@@ -33,7 +29,14 @@
             android:name=".ClassificationBlueActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ClassificationThemeActivity"></activity>
+        <activity android:name=".ClassificationThemeActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

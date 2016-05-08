@@ -3,7 +3,13 @@
     <color name="colorPrimary">#6C5C87</color>
     <color name="colorPrimaryDark">#554470</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="themeViolet">#6C5C87</color>
     <color name="themeBlue">#54BFE3</color>
     <color name="themeBlack">#1F1F1F</color>
     <color name="themeYellow">#FFCA28</color>
+    <color name="green_button_normal">#4CAF50</color>
+    <color name="green_theme_selection">#81C784</color>
+    <color name="button_pressed">#424242</color>
+    <color name="text_black_light">#212121</color>
+    <color name="text_green_dark">#388E3C</color>
 </resources>
