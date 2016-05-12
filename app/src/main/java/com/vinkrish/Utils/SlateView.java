@@ -47,18 +47,16 @@ public class SlateView extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setColor(ContextCompat.getColor(getContext(), R.color.themeViolet));
+        mPaint.setStrokeWidth(30);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        mPaint.setStrokeWidth(20);
         mPath.moveTo(initialX, canvas.getHeight());
-        mPath.lineTo(initialX, (float) (canvas.getHeight() - 50));
-        mPaint.setStrokeWidth(30);
+        mPath.lineTo(initialX, (float) 50);
         mPath.lineTo(canvas.getWidth() - initialX, 50);
-        mPaint.setStrokeWidth(20);
         mPath.lineTo(canvas.getWidth() - initialX, canvas.getHeight());
 
         canvas.drawPath(mPath, mPaint);

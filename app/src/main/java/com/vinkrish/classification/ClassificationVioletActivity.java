@@ -42,6 +42,7 @@ import com.vinkrish.Utils.HomeView;
 import com.vinkrish.Utils.SinusoidalView;
 import com.vinkrish.Utils.ZigzagView;
 import com.vinkrish.Utils.AnimationUtils.TrajectoryAnimation;
+import com.vinkrish.twitterlike.LikeButtonView;
 
 public class ClassificationVioletActivity extends AppCompatActivity {
     private RelativeLayout classificationLayout;
@@ -135,8 +136,7 @@ public class ClassificationVioletActivity extends AppCompatActivity {
         Point point2 = new Point(viewLocation[0] + 80, viewLocation[1] - 40);
         Point point3 = new Point(viewLocation[0] + bottomLayout.getWidth() - 80, viewLocation[1] - 40);
         Point point4 = new Point(viewLocation[0] + bottomLayout.getWidth(), viewLocation[1]);
-        int color = Color.WHITE;
-        BottomLayerShadow bottomLayerShadow = new BottomLayerShadow(this, point1, point2, point3, point4, color);
+        BottomLayerShadow bottomLayerShadow = new BottomLayerShadow(this, point1, point2, point3, point4, 123);
         classificationLayout.addView(bottomLayerShadow);
     }
 

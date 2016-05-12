@@ -49,6 +49,7 @@ import com.vinkrish.Utils.HomeView;
 import com.vinkrish.Utils.SinusoidalView;
 import com.vinkrish.Utils.ZigzagView;
 import com.vinkrish.Utils.AnimationUtils.TrajectoryAnimation;
+import com.vinkrish.twitterlike.LikeButtonView;
 
 @SuppressLint("NewApi")
 @SuppressWarnings("deprecation")
@@ -101,10 +102,10 @@ public class ClassificationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*setContentView(R.layout.activity_selector);
-        activitySelector();*/
+        setContentView(R.layout.activity_selector);
+        activitySelector();
 
-        loadClassification();
+        /*loadClassification();
 
         initFrame();
 
@@ -121,7 +122,7 @@ public class ClassificationActivity extends AppCompatActivity {
             public void run() {
                 postLayoutLoad();
             }
-        });
+        });*/
     }
 
     private void initFrame() {

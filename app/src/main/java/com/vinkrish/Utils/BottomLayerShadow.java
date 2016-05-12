@@ -10,13 +10,15 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.vinkrish.classification.R;
+
 /**
  * Created by vinkrish on 10/04/16.
  */
 public class BottomLayerShadow extends View {
     private Path mPath;
     private Paint mPaint;
-    private int color = Color.WHITE;
+    private int color = R.color.white;
     private Point point1, point2, point3, point4;
 
     public BottomLayerShadow (Context context, Point point1, Point point2, Point point3, Point point4, int color){
@@ -25,7 +27,7 @@ public class BottomLayerShadow extends View {
         this.point2 = point2;
         this.point3 = point3;
         this.point4 = point4;
-        this.color = color;
+        //this.color = color;
         init();
     }
 

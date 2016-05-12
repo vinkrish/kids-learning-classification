@@ -22,11 +22,18 @@ public class CurvedView extends View {
     private int w, h;
     private Paint mPaint;
     private Path mPath;
-    private int initialX = 100;
+    private int initialX = 100, finalX;
 
     public CurvedView(Context context, int initialX) {
         super(context);
         this.initialX = initialX;
+        init();
+    }
+
+    public CurvedView(Context context, int initialX, int finalX) {
+        super(context);
+        this.initialX = initialX;
+        this.finalX = finalX;
         init();
     }
 
